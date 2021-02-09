@@ -58,11 +58,11 @@ model-viewer {
   padding: 0px 16px 0px 40px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
-  color:#4285f4;
+  color:#2a2b2b;
   height: 36px;
   line-height: 36px;
   border-radius: 18px;
-  border: 1px solid #DADCE0;
+  border: 1px solid #2a2a2a;
 }
 
 #ar-button:active {
@@ -74,7 +74,7 @@ model-viewer {
 }
 
 #ar-button:focus-visible {
-  outline: 1px solid #4285f4;
+  outline: 1px solid #2a2a2a;
 }
 
 @keyframes circle {
