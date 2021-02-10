@@ -15,12 +15,12 @@ model-viewer {
   background-color: #ffffff;
 }
 
-model-viewer:not(.show-hotspots) .Hotspot {
+model-viewer:not(.show-hotspots) .hotspot {
       opacity: 0;
       pointer-events: none;
     }
 
-.Hotspot {
+.hotspot {
   background: #fff;
   border-radius: 32px;
   border: 0;
@@ -34,7 +34,7 @@ model-viewer:not(.show-hotspots) .Hotspot {
   width: 24px;
 }
 
-.Hotspot:not([data-visible]) {
+.hotspot:not([data-visible]) {
   background: transparent;
   border: 4px solid #fff;
   box-shadow: none;
@@ -43,19 +43,19 @@ model-viewer:not(.show-hotspots) .Hotspot {
   width: 32px;
 }
 
-.Hotspot:focus {
+.hotspot:focus {
   border: 4px solid rgb(0, 128, 200);
   height: 32px;
   outline: none;
   width: 32px;
 }
 
-.Hotspot > * {
+.hotspot > * {
   opacity: 1;
   transform: translateY(-50%);
 }
 
-.HotspotAnnotation{
+.info{
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -73,7 +73,7 @@ model-viewer:not(.show-hotspots) .Hotspot {
   width: max-content;
 }
 
-.Hotspot:not([data-visible]) > * {
+.hotspot:not([data-visible]) > * {
   opacity: 0;
   pointer-events: none;
   transform: translateY(calc(-50% + 4px));
