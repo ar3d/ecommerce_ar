@@ -5,35 +5,176 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
     <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+model-viewer {
+  width: 100%;
+  height: 90%;
+    background-color: #ffffff;
+      --poster-color: transparent;
+      --ar-button-scale: 1.25;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.attribution h1 {
+  margin: 0 0 0.25em;
+}
+
+.attribution img {
+  opacity: 0.5;
+  height: 2em;
+}
+
+.attribution .cc {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+    model-viewer:not(.show-hotspots) .hotspot {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .hotspot {
+      position: relative;
+      background: rgb(89, 2, 2);
+      border-radius: 24px;
+      box-sizing: border-box;
+      border: 0;
+      transition: opacity 0.3s;
+
+      width: 16px;
+      height: 16px;
+      padding: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .hotspot:not([data-visible]) {
+      background: transparent;
+      border: 4px solid #590202;
+
+      width: 24px;
+      height: 24px;
+      box-shadow: none;
+      pointer-events: none;
+    }
+
+    .hotspot:focus {
+      border: 4px solid rgb(0, 128, 200);
+      width: 24px;
+      height: 24px;
+      outline: none;
+    }
+
+    .hotspot > * {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+
+    .hotspot:not([data-visible]) > * {
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(calc(-50% + 4px));
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .info {
+      display: block;
+      position: absolute;
+      font-family: Futura, Helvetica Neue, sans-serif;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 700;
+      font-size: 16px;
+      max-width: 1000px;
+      padding: 0.5em 1em;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      left: calc(100% + 1em);
+      top: 50%;
+    }
+
+    paper-toggle-button {
+      --paper-toggle-button-checked-bar-color:  var(--paper-orange-500);
+      --paper-toggle-button-checked-button-color:  var(--paper-orange-500);
+      --paper-toggle-button-checked-ink-color: var(--paper-orange-500);
+      --paper-toggle-button-label-color: #eee;
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+    }
+    
+    .mwc-switch-wrapper {
+      position: absolute;
+      bottom: 2em;
+      left: 2em;
+      color: #fff;
+    }
+    
+    mwc-switch > span {
+      display: inline-block;
+      height: 1em;
+      vertical-align: 1px;
+      margin: 0 0.75em;
+    }
+
+    mwc-switch {
+      --mdc-theme-secondary: orange;
+      font-family: system-ui;
+</style>
+
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="orologio.glb" camera-controls ar ios-src="orologio.usdz" ar-placement="wall" id="modelViewer" camera-orbit="7.721deg 75deg 1.372m" poster="poster.png">
-      <button class="Hotspot" slot="hotspot-2" data-position="0.001986873389813869m 1.5005825894580571m 0.0013468004810378955m" data-normal="0.10446985012564346m 0.03406721973560001m 0.9939444023456302m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Terminale in acciaio verniciato</div>
-      </button><button class="Hotspot" slot="hotspot-3" data-position="0.1430935131714639m 1.0289526855431612m 0.007527801834067628m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Piatto in acciaio satinato</div>
-      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.1336875977827579m 0.805743126847652m -0.00036306508561261615m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Stecche in acciaio cromato</div>
+    <model-viewer src="orologio.glb" ios-src="orologio.usdz" 
+                ar-placement="wall" camera-target="0 0 0"
+                id="modelViewer"
+                autoplay
+                ar
+                camera-controls
+                poster="poster.png">
+      <button class="hotspot" slot="hotspot-2" data-position="0.001986873389813869m 1.5005825894580571m 0.0013468004810378955m" data-normal="0.10446985012564346m 0.03406721973560001m 0.9939444023456302m" data-visibility-attribute="visible">
+          <div class="info">Terminale in acciaio verniciato</div>
+      </button><button class="hotspot" slot="hotspot-3" data-position="0.1430935131714639m 1.0289526855431612m 0.007527801834067628m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
+          <div class="info">Piatto in acciaio satinato</div>
+      </button><button class="hotspot" slot="hotspot-4" data-position="-0.1336875977827579m 0.805743126847652m -0.00036306508561261615m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
+          <div class="info">Stecche in acciaio cromato</div>
       </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
       <div class="mwc-switch-wrapper">
       <mwc-switch id="toggleHotspots"><span>Show info</span></mwc-switch>
     </div>
 <!--     <paper-toggle-button id="toggleHotspots">Show annotations</paper-toggle-button> -->
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
     </model-viewer>  
-    <script src="script.js"></script>
     <script type="module">
     
     toggleHotspots.addEventListener('change', () => {
@@ -41,13 +182,23 @@
     });
     
   </script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    </script>
+
+   
+  
+  
+  
+  <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
   <script nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
   <!--   <script type="module" src="https://unpkg.com/@polymer/paper-toggle-button@3.0.1/paper-toggle-button.js?module"></script> -->
   <script type="module" src="https://unpkg.com/@material/mwc-switch@0.14.1/mwc-switch.js?module"></script>
-   </body>
+</body>
 </html>
