@@ -15,6 +15,11 @@ model-viewer {
   background-color: #ffffff;
 }
 
+model-viewer:not(.show-hotspots) .hotspot {
+      opacity: 0;
+      pointer-events: none;
+    }
+
 .Hotspot {
   background: #fff;
   border-radius: 32px;
@@ -162,3 +167,31 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
+
+  paper-toggle-button {
+      --paper-toggle-button-checked-bar-color:  var(--paper-orange-500);
+      --paper-toggle-button-checked-button-color:  var(--paper-orange-500);
+      --paper-toggle-button-checked-ink-color: var(--paper-orange-500);
+      --paper-toggle-button-label-color: #eee;
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+    }
+    
+    .mwc-switch-wrapper {
+      position: absolute;
+      bottom: 2em;
+      left: 2em;
+      color: #fff;
+    }
+    
+    mwc-switch > span {
+      display: inline-block;
+      height: 1em;
+      vertical-align: 1px;
+      margin: 0 0.75em;
+    }
+
+    mwc-switch {
+      --mdc-theme-secondary: orange;
+      font-family: system-ui;
