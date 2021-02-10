@@ -1,0 +1,18 @@
+<model-viewer src="orologio.glb" camera-controls ar ios-src="orologio.usdz" camera-orbit="3.914e-16deg 75deg 2.745m" poster="poster.png">
+    <button class="Hotspot" slot="hotspot-1" data-position="0.11652359567905256m 1.1742958978545504m 0.015055603668135256m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Piatto in acciaio satinato</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.012581613882625353m 1.954430759207976m -0.0030950826225167147m" data-normal="0.8085490841233893m 0.034067221584980927m 0.5874417443259445m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Terminali verniciati in nero</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="-0.5008253596363589m 1.325038548578163m -0.003387349164794266m" data-normal="-0.29390839886176673m -0.5090632613252866m 0.8089947150923642m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Stecche in acciaio cromato</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

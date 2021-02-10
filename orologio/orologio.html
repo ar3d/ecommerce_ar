@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="orologio.glb" camera-controls ar ios-src="orologio.usdz" ar-placement="wall" camera-orbit="3.914e-16deg 75deg 2.745m" poster="poster.png">
+      <button class="Hotspot" slot="hotspot-1" data-position="0.11652359567905256m 1.1742958978545504m 0.015055603668135256m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Piatto in acciaio satinato</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.012581613882625353m 1.954430759207976m -0.0030950826225167147m" data-normal="0.8085490841233893m 0.034067221584980927m 0.5874417443259445m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Terminali verniciati in nero</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="-0.5008253596363589m 1.325038548578163m -0.003387349164794266m" data-normal="-0.29390839886176673m -0.5090632613252866m 0.8089947150923642m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Stecche in acciaio cromato</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <script type="module">
+    
+    toggleHotspots.addEventListener('change', () => {
+      modelViewer.classList.toggle('show-hotspots', toggleHotspots.checked);
+    });
+    
+  </script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </script>
+  <!--   <script type="module" src="https://unpkg.com/@polymer/paper-toggle-button@3.0.1/paper-toggle-button.js?module"></script> -->
+  <script type="module" src="https://unpkg.com/@material/mwc-switch@0.14.1/mwc-switch.js?module"></script>
+  </body>
+</html>
