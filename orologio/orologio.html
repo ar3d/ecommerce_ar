@@ -11,14 +11,19 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="orologio.glb" camera-controls ar ios-src="orologio.usdz" ar-placement="wall" camera-orbit="3.914e-16deg 75deg 2.745m" poster="poster.png">
-      <button class="hotspot" slot="hotspot-1" data-position="0.11652359567905256m 1.1742958978545504m 0.015055603668135256m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
-          <div class="info">Piatto in acciaio satinato</div>
-      </button><button class="hotspot" slot="hotspot-3" data-position="0.012581613882625353m 1.954430759207976m -0.0030950826225167147m" data-normal="0.8085490841233893m 0.034067221584980927m 0.5874417443259445m" data-visibility-attribute="visible">
-          <div class="info">Terminali verniciati in nero</div>
-      </button><button class="hotspot" slot="hotspot-5" data-position="-0.16646356925215408m 0.7458054340276961m -0.0010704678600310235m" data-normal="0.509059433741945m -0.29390537717545395m 0.8089982213736225m" data-visibility-attribute="visible">
-          <div class="info">Stecche in acciaio cromato</div>
+    <model-viewer src="orologio.glb" camera-controls ar ios-src="orologio.usdz" ar-placement="wall" camera-orbit="7.721deg 75deg 1.372m" poster="poster.png">
+      <button class="Hotspot" slot="hotspot-2" data-position="0.001986873389813869m 1.5005825894580571m 0.0013468004810378955m" data-normal="0.10446985012564346m 0.03406721973560001m 0.9939444023456302m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Terminale in acciaio verniciato</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.1430935131714639m 1.0289526855431612m 0.007527801834067628m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Piatto in acciaio satinato</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.1336875977827579m 0.805743126847652m -0.00036306508561261615m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Stecche in acciaio cromato</div>
       </button>
+      <div class="mwc-switch-wrapper">
+      <mwc-switch id="toggleHotspots"><span>Show info</span></mwc-switch>
+    </div>
+<!--     <paper-toggle-button id="toggleHotspots">Show annotations</paper-toggle-button> -->
+</model-viewer>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -28,10 +33,6 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    <div class="mwc-switch-wrapper">
-      <mwc-switch id="toggleHotspots"><span>Show info</span></mwc-switch>
-    </div>
-<!--     <paper-toggle-button id="toggleHotspots">Show annotations</paper-toggle-button> -->
     </model-viewer>  
     <script src="script.js"></script>
     <script type="module">
@@ -46,5 +47,5 @@
     </script>
   <!--   <script type="module" src="https://unpkg.com/@polymer/paper-toggle-button@3.0.1/paper-toggle-button.js?module"></script> -->
   <script type="module" src="https://unpkg.com/@material/mwc-switch@0.14.1/mwc-switch.js?module"></script>
-  </body>
+   </body>
 </html>
