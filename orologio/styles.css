@@ -15,7 +15,7 @@ model-viewer {
   background-color: #ffffff;
 }
 
-model-viewer:not(.show-Hotspots) .Hotspot {
+model-viewer:not(.show-hotspots) .Hotspot {
       opacity: 0;
       pointer-events: none;
     }
