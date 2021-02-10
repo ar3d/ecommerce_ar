@@ -15,9 +15,6 @@ model-viewer {
   background-color: #ffffff;
 }
 
-model-viewer:not(.show-hotspots) .hotspot {
-      opacity: 0;
-      pointer-events: none;
 
 .Hotspot {
   background: #fff;
@@ -93,7 +90,7 @@ model-viewer:not(.show-hotspots) .hotspot {
       position: absolute;
       bottom: 2em;
       left: 2em;
-      color: #fff;
+      color: #2a2a2a;
     }
     
     mwc-switch > span {
@@ -193,3 +190,7 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
+
+model-viewer:not(.show-hotspots) .Hotspot {
+      opacity: 0;
+      pointer-events: none;
