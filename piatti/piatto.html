@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Document</title>
+
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <style>
+        .mainSection{
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 80%;
+            margin-left: auto;
+            margin-right: auto;          
+        }
+
+        .firstSection{
+            background-color: #e2de1b;
+            text-align: center;
+            width: 90px;
+            position: absolute;
+            left: 10px;
+            top: 90%;
+        }
+
+        .secondSection{
+            background-color: #ab2cb8;
+            text-align: center;
+            width: 90px; 
+            position: absolute;
+            left: -22.5%;
+            right: 0px;
+            top: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .thirdSection{
+            background-color: #5cd7d7;
+            text-align: center;
+            top: 90%;
+            width: 90px;
+            position: absolute;
+            right: 26.5%;
+        }
+
+        .defaultSection{
+            background-color: #c63633;
+            text-align: center;
+            top: 90%;
+            width: 90px;
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mainSection">
+        <model-viewer id='model' class="mainSection" <model-viewer src="piatto/piatto_verde.glb" camera-controls ar ar-modes="scene-viewer webxr quick-look" ios-src="piatto/piatto_verde.usdz"></model-viewer>
+
+
+        <div class="firstSection">
+            <button onclick = 'toggleB()'>Op 1</button><br>
+        </div>
+
+        <div class="secondSection">
+            <button onclick = "toggleN()">Op 2</button><br>
+        </div>
+
+        <div class=thirdSection>
+            <button onclick = "toggleR()">Op 3</button><br>
+        </div>
+
+        <div class="defaultSection">
+            <button onclick = "toggleV()" >Op 4</button><br>
+        </div>
+        
+</div>
+
+<script src="script_2.js"></script>
+
+</body>
+</html>
