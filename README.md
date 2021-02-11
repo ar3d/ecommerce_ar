@@ -6,3 +6,4 @@ model-viewer su parete: orologio con hotspot
 https://ar3d.github.io/ecommerce_ar/orologio/orologio.html
 model-viewer con scene-viewer
 https://ar3d.github.io/ecommerce_ar/tavolo/tavolo.html
+https://ar3d.github.io/ecommerce_ar/piatto_sardo/piatto_sardo.html
