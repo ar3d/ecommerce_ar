@@ -61,6 +61,21 @@
             position: absolute;
             right: 10px;
         }
+
+.slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+}
     </style>
 </head>
 
@@ -83,7 +98,7 @@
         </div>
 
         <div class="defaultSection">
-            <button onclick = "toggleV()" style="background-image: url('piatto/piatto_verde.png')";></button><br>
+            <button class="slide" onclick = "toggleV()" style="background-image: url('piatto/piatto_verde.png')";></button><br>
         </div>
         
 </div>
