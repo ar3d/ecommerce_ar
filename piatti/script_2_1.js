@@ -8,23 +8,23 @@ let myusdz = [
 var model = document.getElementById('model');
 function toggleB(){
     model.src = 'piatto/piatto_blu.glb';
-    // model.iosSrc === 'piatto/piatto_blu.usdz';
+    // model.iosSrc === myusdz[0];
 }
 
 var model = document.getElementById('model');
 function toggleN(){
     model.src = 'piatto/piatto_nero.glb';
-    // model.iosSrc === 'piatto/piatto_nero.usdz';
+    // model.iosSrc === myusdz[1];
 }
 
 var model = document.getElementById('model');
 function toggleR(){
     model.src = 'piatto/piatto_rosso.glb';
-    // model.iosSrc === 'piatto/piatto_rosso.usdz';
+    // model.iosSrc === myusdz[2];
 }
 
 var model = document.getElementById('model');
 function toggleV(){
     model.src = 'piatto/piatto_verde.glb';
-    // model.iosSrc === 'piatto/piatto_verde.usdz';
+    // model.iosSrc === myusdz[3];
 }
