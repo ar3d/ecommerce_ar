@@ -1,0 +1,12 @@
+<model-viewer src="bottiglia_vermentino.glb" ar ar-modes="scene-viewer webxr quick-look" ios-src="bottiglia_vermentino.usdz" shadow-softness="1" shadow-intensity="0" exposure="1" camera-orbit="-11.13deg 75deg 0.4109m" poster="poster.png">
+
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
