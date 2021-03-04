@@ -8,3 +8,6 @@ model-viewer con scene-viewer
 https://ar3d.github.io/ecommerce_ar/tavolo/tavolo.html
 https://ar3d.github.io/ecommerce_ar/piatto_sardo/piatto_sardo.html
 https://ar3d.github.io/ecommerce_ar/piatti/piatto.html
+https://ar3d.github.io/ecommerce_ar/vermentino/vermentino.html
+https://ar3d.github.io/ecommerce_ar/horo/horo.html
+https://ar3d.github.io/ecommerce_ar/scarpone/scarpone.html
