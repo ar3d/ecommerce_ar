@@ -1,4 +1,4 @@
-<model-viewer src="bottiglia_vermentino.glb" camera-controls ios-src="bottiglia_vermentino.usdz" ar ar-modes="scene-viewer webxr quick-look" camera-orbit="9.36e-15deg 75deg 4.109m" poster="poster.png">
+<model-viewer src="bottiglia_vermentino.glb" camera-controls ar ar-modes="scene-viewer webxr quick-look" ios-src="bottiglia_vermentino.usdz" camera-orbit="11.07deg 75deg 0.4109m" poster="poster.png">
 
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>

@@ -1,4 +1,4 @@
-<model-viewer src="horo.glb" camera-controls ar ar-modes="scene-viewer webxr quick-look" ios-src="horo.usdz" camera-orbit="-81.49deg 56.95deg 1.562m" poster="poster.png">
+<model-viewer src="horo.glb" camera-controls ar ar-modes="scene-viewer webxr quick-look" ios-src="horo.usdz" camera-orbit="-75.3deg 57.46deg 0.1562m" poster="poster.png">
 
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
