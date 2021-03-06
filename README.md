@@ -11,3 +11,4 @@ https://ar3d.github.io/ecommerce_ar/piatti/piatto.html
 https://ar3d.github.io/ecommerce_ar/vermentino/vermentino.html
 https://ar3d.github.io/ecommerce_ar/horo/horo.html
 https://ar3d.github.io/ecommerce_ar/scarpone/scarpone.html
+https://ar3d.github.io/ecommerce_ar/scarpetta_sarda/scarpetta_sarda.html
